@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIServer", "APIServer\APIServer.csproj", "{7AC8A3AE-8EA8-4A81-BCE8-72ADD81C5875}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api.Domain", "api.Domain\api.Domain.csproj", "{B76D95DB-13D7-4B72-8F23-FEEB7EB44880}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration.Currency", "Integration.Currency\Integration.Currency.csproj", "{FE9FC579-32F8-46D0-A11B-29717584B051}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AC8A3AE-8EA8-4A81-BCE8-72ADD81C5875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AC8A3AE-8EA8-4A81-BCE8-72ADD81C5875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AC8A3AE-8EA8-4A81-BCE8-72ADD81C5875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AC8A3AE-8EA8-4A81-BCE8-72ADD81C5875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B76D95DB-13D7-4B72-8F23-FEEB7EB44880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B76D95DB-13D7-4B72-8F23-FEEB7EB44880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B76D95DB-13D7-4B72-8F23-FEEB7EB44880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B76D95DB-13D7-4B72-8F23-FEEB7EB44880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE9FC579-32F8-46D0-A11B-29717584B051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9FC579-32F8-46D0-A11B-29717584B051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9FC579-32F8-46D0-A11B-29717584B051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9FC579-32F8-46D0-A11B-29717584B051}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
