@@ -5,7 +5,7 @@ namespace Integration.Currency.Response
 {
 
     [XmlRoot("CurrencyRates")]
-    public class CurrencyRates : BaseStatusError
+    public class CurrencyRatesResponse : BaseStatusError
     {
         [XmlAttribute(AttributeName = "Name")]
         public string Name { get; set; }
@@ -14,10 +14,10 @@ namespace Integration.Currency.Response
         public string Date { get; set; }
 
         [XmlElement(ElementName = "Currency")]
-        public List<Currency> Currencies { get; set; }
+        public List<CurrencyResponse> Currencies { get; set; }
     }
 
-    public class Currency
+    public class CurrencyResponse
     {
         [XmlAttribute(AttributeName = "ISOCode")]
         public string ISOCode { get; set; }

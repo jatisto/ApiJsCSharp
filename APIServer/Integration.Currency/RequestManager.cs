@@ -18,8 +18,8 @@ namespace Integration.Currency
             _baseApiClient = new BaseApiClient(settings);
         }
 
-        public async Task<CurrencyRates> GetCurrency() =>
-            await Execute(async () => await _baseApiClient.ExecuteRequest<CurrencyRates>());
+        public async Task<CurrencyRatesResponse> GetCurrency() =>
+            await Execute(async () => await _baseApiClient.ExecuteRequest<CurrencyRatesResponse>());
             
         
         private static async Task<TResponse> Execute<TResponse>(Func<Task<TResponse>> request) where TResponse : BaseStatusError, new()

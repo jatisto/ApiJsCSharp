@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\api.DomainContext\api.DomainContext.csproj" />
+      <ProjectReference Include="..\Integration.Currency\Integration.Currency.csproj" />
+    </ItemGroup>
+
+</Project>

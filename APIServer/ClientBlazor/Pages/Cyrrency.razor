@@ -1,0 +1,51 @@
+﻿@page "/currency"
+@using Integration.Currency
+@using Integration.Currency.Response
+
+
+@if (CurrencyRatesResponse is null)
+{
+    <div class="h2">Идёт загрузка...</div>
+}
+else
+{
+    <h3>Курс валют на @Convert.ToDateTime(CurrencyRatesResponse.Date).ToString("D") (НБКР)</h3>
+                                                                            
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <td><b>ISOCode</b></td>
+                <td><b>Rate</b></td>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in CurrencyRatesResponse.Currencies)
+        {
+            <tr>
+                <td>@item.ISOCode</td>
+                <td>@Convert.ToDecimal(item.Value).ToString("F")</td>
+            </tr>
+        }
+
+        </tbody>
+
+    </table>
+}
+
+@code {
+
+    public CurrencyRatesResponse CurrencyRatesResponse;
+
+    protected override async Task OnInitializedAsync()
+    {
+        HttpSettings settings = new HttpSettings()
+        {
+            FileXml = "daily.xml"
+        };
+
+        var manager = new RequestManager(settings);
+
+        CurrencyRatesResponse = await manager.GetCurrency();
+    }
+
+}

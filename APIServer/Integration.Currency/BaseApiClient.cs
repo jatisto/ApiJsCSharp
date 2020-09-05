@@ -6,7 +6,6 @@ using System.Net.Mime;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
-using Integration.Currency.Response;
 
 namespace Integration.Currency
 {
@@ -25,9 +24,8 @@ namespace Integration.Currency
             using (var client = GetHttpClient())
             {
                 var serializer = new XmlSerializer(typeof(TResponse));
-                CurrencyRates obj;
-                
-                using (Stream s = await client.GetStreamAsync(RequestUri + Settings.FileXml))
+
+                await using (Stream s = await client.GetStreamAsync(RequestUri + Settings.FileXml))
                 {
                     using (StreamReader str = new StreamReader(s))
                     {

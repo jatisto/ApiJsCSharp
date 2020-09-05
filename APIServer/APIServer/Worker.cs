@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 using Integration.Currency;
-using Integration.Currency.Response;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
