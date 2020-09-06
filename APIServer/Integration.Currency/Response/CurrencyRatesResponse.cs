@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Xml.Serialization;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Integration.Currency.Response
 {
@@ -7,6 +10,10 @@ namespace Integration.Currency.Response
     [XmlRoot("CurrencyRates")]
     public class CurrencyRatesResponse : BaseStatusError
     {
+        [BsonId]
+        [XmlIgnore]
+        public ObjectId Id { get; set; }
+
         [XmlAttribute(AttributeName = "Name")]
         public string Name { get; set; }
         
@@ -23,7 +30,6 @@ namespace Integration.Currency.Response
         public string ISOCode { get; set; }
 
         public int Nominal { get; set; }
-
         public string Value { get; set; }
     }
 }
